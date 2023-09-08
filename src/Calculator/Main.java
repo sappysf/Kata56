@@ -11,7 +11,7 @@ public class Main {
         String firstValue = null;
         String secondValue = null;
         if (data.length != 3) {
-            throw new Exception("Введено больше двух значений!/ или не корректный ввод: Операция должна содержать a (+,-,*,/) a");
+            throw new Exception("Р’РІРµРґРµРЅРѕ Р±РѕР»СЊС€Рµ РґРІСѓС… Р·РЅР°С‡РµРЅРёР№!/ РёР»Рё РЅРµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ: РћРїРµСЂР°С†РёСЏ РґРѕР»Р¶РЅР° СЃРѕРґРµСЂР¶Р°С‚СЊ a (+,-,*,/) a");
         } else {
             try {
                 for (int i = 0; i < data.length; i++) {
@@ -20,7 +20,7 @@ public class Main {
                     operation = data[1];
                 }
             } catch (ArrayIndexOutOfBoundsException e) {
-                throw new Exception("Не корректный ввод");
+                throw new Exception("РќРµ РєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ");
             }
         }
         String[] romanFullValue = new String[]{"I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI", "XXII", "XXIII", "XXIV", "XXV", "XXVI", "XXVII", "XXVIII", "XXIX", "XXX", "XXXI", "XXXII", "XXXIII", "XXXIV", "XXXV", "XXXVI", "XXXVII", "XXXVIII", "XXXIX", "XL", "XLI", "XLII", "XLIII", "XLIV", "XLV", "XLVI", "XLVII", "XLVIII", "XLIX", "L", "LI", "LII", "LIII", "LIV", "LV", "LVI", "LVII", "LVIII", "LIX", "LX", "LXI", "LXII", "LXIII", "LXIV", "LXV", "LXVI", "LXVII", "LXVIII", "LXIX", "LXX", "LXXI", "LXXII", "LXXIII", "LXXIV", "LXXV", "LXXVI", "LXXVII", "LXXVIII", "LXXIX", "LXXX", "LXXXI", "LXXXII", "LXXXIII", "LXXXIV", "LXXXV", "LXXXVI", "LXXXVII", "LXXXVIII", "LXXXIX", "XC", "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII", "XCVIII", "XCIX", "C"};
@@ -56,13 +56,13 @@ public class Main {
                         String megaResult = romanFullValue[result - 1];
                         System.out.println(megaResult);
                     } else {
-                        throw new Exception("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+                        throw new Exception("С„РѕСЂРјР°С‚ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРё РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂСЏРµС‚ Р·Р°РґР°РЅРёСЋ - РґРІР° РѕРїРµСЂР°РЅРґР° Рё РѕРґРёРЅ РѕРїРµСЂР°С‚РѕСЂ (+, -, /, *)");
                     }
                 } catch (ArrayIndexOutOfBoundsException e) {
-                    throw new Exception("В римской системе счесления нет отрицательных чисел");
+                    throw new Exception("Р’ СЂРёРјСЃРєРѕР№ СЃРёСЃС‚РµРјРµ СЃС‡РµСЃР»РµРЅРёСЏ РЅРµС‚ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР»");
                 }
             } else {
-                throw new Exception("Введите два значения одного типа");
+                throw new Exception("Р’РІРµРґРёС‚Рµ РґРІР° Р·РЅР°С‡РµРЅРёСЏ РѕРґРЅРѕРіРѕ С‚РёРїР°");
             }
         }
         try {
@@ -77,22 +77,22 @@ public class Main {
                     } else if (operation.contains("/")) {
                         System.out.println(Integer.parseInt(firstValue) / Integer.parseInt(secondValue));
                     } else {
-                        throw new Exception("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+                        throw new Exception("С„РѕСЂРјР°С‚ РјР°С‚РµРјР°С‚РёС‡РµСЃРєРѕР№ РѕРїРµСЂР°С†РёРё РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂСЏРµС‚ Р·Р°РґР°РЅРёСЋ - РґРІР° РѕРїРµСЂР°РЅРґР° Рё РѕРґРёРЅ РѕРїРµСЂР°С‚РѕСЂ (+, -, /, *)");
                     }
                 } else {
-                    throw new Exception("Введите значение от 1 до 10");
+                    throw new Exception("Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РѕС‚ 1 РґРѕ 10");
                 }
             }
         } catch (NumberFormatException e) {
-            throw new Exception("Введены некорректные значения");
+            throw new Exception("Р’РІРµРґРµРЅС‹ РЅРµРєРѕСЂСЂРµРєС‚РЅС‹Рµ Р·РЅР°С‡РµРЅРёСЏ");
         }
-        return "Программа завершена!";
+        return "РџСЂРѕРіСЂР°РјРјР° Р·Р°РІРµСЂС€РµРЅР°!";
     }
 
 
     public static void main(String[] args) throws Exception {
         Scanner input = new Scanner(System.in);
-        System.out.println("Введите выражение: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІС‹СЂР°Р¶РµРЅРёРµ: ");
         String string = input.nextLine();
         System.out.println(calc(string));
     }
