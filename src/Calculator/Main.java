@@ -11,7 +11,7 @@ public class Main {
         String firstValue = null;
         String secondValue = null;
         if (data.length != 3) {
-            throw new Exception("¬ведено больше двух значений!");
+            throw new Exception("¬ведено больше двух значений!/ или не корректный ввод: ќпераци€ должна содержать a (+,-,*,/) a");
         } else {
             try {
                 for (int i = 0; i < data.length; i++) {
