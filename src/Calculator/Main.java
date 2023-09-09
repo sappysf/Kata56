@@ -10,8 +10,10 @@ public class Main {
         String operation = null;
         String firstValue = null;
         String secondValue = null;
-        if (data.length != 3) {
-            throw new Exception("Введено больше двух значений!/ или не корректный ввод: Операция должна содержать a (+,-,*,/) a");
+        if (data.length > 3) {
+            throw new Exception("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
+        } else if (data.length < 3) {
+            throw new Exception("строка не является математической операцией");
         } else {
             try {
                 for (int i = 0; i < data.length; i++) {
@@ -62,7 +64,7 @@ public class Main {
                     throw new Exception("В римской системе счесления нет отрицательных чисел");
                 }
             } else {
-                throw new Exception("Введите два значения одного типа");
+                throw new Exception("используются одновременно разные системы счисления");
             }
         }
         try {
