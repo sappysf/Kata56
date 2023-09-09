@@ -13,7 +13,7 @@ public class Main {
         if (data.length > 3) {
             throw new Exception("формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         } else if (data.length < 3) {
-            throw new Exception("строка не является математической операцией");
+            throw new Exception("строка не является математической операцией или не удовлетворяет заданию");
         } else {
             try {
                 for (int i = 0; i < data.length; i++) {
